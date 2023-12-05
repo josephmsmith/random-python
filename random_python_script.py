@@ -14,12 +14,12 @@ def process_excel(file_path):
     # # Sort by MATCH column if needed
     df.sort_values(by='MATCH', inplace=True)
 
-    # # Save the modified DataFrame back to Excel, without the default index
-    # df.to_excel(file_path, index=False)
+    # Save the modified DataFrame back to Excel, without the default index
+    df.to_excel(file_path, index=False)
 
     # # Load the workbook and select the active worksheet
-    # workbook = load_workbook(file_path)
-    # worksheet = workbook.active
+    workbook = load_workbook(file_path)
+    worksheet = workbook.active
 
     # # Define the range for your table (modify as per your data)
     # table_range = "A1:D10"  # Example range, adjust to your data
